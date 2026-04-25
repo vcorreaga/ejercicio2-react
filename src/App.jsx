@@ -1,12 +1,17 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Hero />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/productos" element={<Products />} />
+        <Route path="/contacto" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,18 +1,50 @@
-function Card({ title, text }) {
+function Card({ title, text, icon }) {
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
+    <div
+      style={{
+        textAlign: "center",
+        maxWidth: "250px",
+        marginTop: "10px", // 👈 alineación
+      }}
+    >
+      {/* ICONO */}
       <div
         style={{
-          background: "#111",
+          background: "#111827",
+          width: "60px",
+          height: "60px",
+          margin: "0 auto 20px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           color: "white",
-          width: "50px",
-          height: "50px",
-          margin: "0 auto",
+          borderRadius: "4px",
+          fontSize: "22px",
+          boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
         }}
-      ></div>
+      >
+        {icon}
+      </div>
 
-      <h3>{title}</h3>
-      <p>{text}</p>
+      <h3
+        style={{
+          fontSize: "16px",
+          fontWeight: "bold",
+          marginBottom: "10px",
+        }}
+      >
+        {title}
+      </h3>
+
+      <p
+        style={{
+          color: "#6b7280",
+          fontSize: "14px",
+          lineHeight: "1.5",
+        }}
+      >
+        {text}
+      </p>
     </div>
   );
 }
