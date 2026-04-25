@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ProductCard from "../components/ProductCard";
 
 function Products() {
   return (
@@ -23,16 +24,52 @@ function Products() {
         </p>
       </section>
 
-      {/* ZONA DE PRODUCTOS (vacía por ahora) */}
+      {/* PRODUCTOS */}
       <section
         style={{
           background: "#f3f4f6",
           padding: "40px",
+          display: "flex",
+          justifyContent: "center",
+          gap: "30px",
+          flexWrap: "wrap",
         }}
       >
-        <p style={{ textAlign: "center" }}>
-          Aquí van los productos...
-        </p>
+        <ProductCard
+          name="Camiseta Básica Urban"
+          description="Algodón 100% orgánico"
+          price="€29"
+        />
+
+        <ProductCard
+          name="Jeans Slim Fit"
+          description="Denim premium stretch"
+          price="€89"
+        />
+
+        <ProductCard
+          name="Sudadera Oversize"
+          description="Algodón French Terry"
+          price="€65"
+        />
+
+        <ProductCard
+          name="Chaqueta Bomber"
+          description="Nylon resistente al agua"
+          price="€120"
+        />
+
+        <ProductCard
+          name="Gorra Snapback"
+          description="Bordado premium"
+          price="€35"
+        />
+
+        <ProductCard
+          name="Zapatillas Urban"
+          description="Suela de goma antideslizante"
+          price="€95"
+        />
       </section>
 
       <Footer />

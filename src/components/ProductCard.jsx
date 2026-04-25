@@ -40,7 +40,6 @@ function ProductCard({ name, description, price }) {
           {description}
         </p>
 
-        {/* PRECIO + BOTÓN */}
         <div
           style={{
             display: "flex",
