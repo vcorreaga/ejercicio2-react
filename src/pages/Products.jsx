@@ -7,69 +7,73 @@ function Products() {
     <>
       <Header />
 
-      {/* TÍTULO */}
-      <section
-        style={{
-          textAlign: "center",
-          padding: "60px 20px",
-          background: "#f3f4f6",
-        }}
-      >
-        <h1 style={{ fontSize: "32px", marginBottom: "10px" }}>
-          NUESTRA COLECCIÓN
-        </h1>
-
-        <p style={{ color: "#6b7280" }}>
-          Estilo urbano para cada ocasión
-        </p>
-      </section>
-
-      {/* PRODUCTOS */}
       <section
         style={{
           background: "#f3f4f6",
-          padding: "40px",
-          display: "flex",
-          justifyContent: "center",
-          gap: "30px",
-          flexWrap: "wrap",
+          padding: "60px 40px",
         }}
       >
-        <ProductCard
-          name="Camiseta Básica Urban"
-          description="Algodón 100% orgánico"
-          price="€29"
-        />
+        {/* TÍTULO */}
+        <div style={{ textAlign: "center", marginBottom: "40px" }}>
+          <h1 style={{ fontSize: "32px", marginBottom: "10px" }}>
+            NUESTRA COLECCIÓN
+          </h1>
 
-        <ProductCard
-          name="Jeans Slim Fit"
-          description="Denim premium stretch"
-          price="€89"
-        />
+          <p style={{ color: "#6b7280" }}>
+            Estilo urbano para cada ocasión
+          </p>
+        </div>
 
-        <ProductCard
-          name="Sudadera Oversize"
-          description="Algodón French Terry"
-          price="€65"
-        />
+        {/* PRODUCTOS */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: "30px",
+            justifyItems: "center",
+          }}
+        >
+          <ProductCard
+            name="Camiseta Básica Urban"
+            description="Algodón 100% orgánico"
+            price="€29"
+          />
 
-        <ProductCard
-          name="Chaqueta Bomber"
-          description="Nylon resistente al agua"
-          price="€120"
-        />
+          <ProductCard
+            name="Jeans Slim Fit"
+            description="Denim premium stretch"
+            price="€89"
+          />
 
-        <ProductCard
-          name="Gorra Snapback"
-          description="Bordado premium"
-          price="€35"
-        />
+          <ProductCard
+            name="Sudadera Oversize"
+            description="Algodón French Terry"
+            price="€65"
+          />
 
-        <ProductCard
-          name="Zapatillas Urban"
-          description="Suela de goma antideslizante"
-          price="€95"
-        />
+          <ProductCard
+            name="Chaqueta Bomber"
+            description="Nylon resistente al agua"
+            price="€120"
+          />
+
+          {/* FILA CENTRADA */}
+          <div style={{ gridColumn: "2 / 3" }}>
+            <ProductCard
+              name="Gorra Snapback"
+              description="Bordado premium"
+              price="€35"
+            />
+          </div>
+
+          <div style={{ gridColumn: "3 / 4" }}>
+            <ProductCard
+              name="Zapatillas Urban"
+              description="Suela de goma antideslizante"
+              price="€95"
+            />
+          </div>
+        </div>
       </section>
 
       <Footer />

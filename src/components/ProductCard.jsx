@@ -3,7 +3,7 @@ function ProductCard({ name, description, price }) {
     <div
       style={{
         background: "white",
-        width: "250px",
+        width: "220px",
         borderRadius: "6px",
         overflow: "hidden",
         boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
@@ -26,13 +26,18 @@ function ProductCard({ name, description, price }) {
 
       {/* CONTENIDO */}
       <div style={{ padding: "15px" }}>
-        <h3 style={{ fontSize: "16px", marginBottom: "5px" }}>
+        <h3
+          style={{
+            fontSize: "15px",
+            marginBottom: "5px",
+          }}
+        >
           {name}
         </h3>
 
         <p
           style={{
-            fontSize: "14px",
+            fontSize: "13px",
             color: "#6b7280",
             marginBottom: "10px",
           }}
@@ -54,8 +59,9 @@ function ProductCard({ name, description, price }) {
               background: "#111827",
               color: "white",
               border: "none",
-              padding: "8px 12px",
+              padding: "6px 10px",
               cursor: "pointer",
+              fontSize: "12px",
             }}
           >
             AÑADIR
