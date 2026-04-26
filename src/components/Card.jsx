@@ -3,24 +3,20 @@ function Card({ title, text, icon }) {
     <div
       style={{
         textAlign: "center",
-        maxWidth: "250px",
-        marginTop: "10px", // 👈 alineación
+        maxWidth: "260px",
       }}
     >
       {/* ICONO */}
       <div
         style={{
-          background: "#111827",
+          background: "#0f172a",
           width: "60px",
           height: "60px",
           margin: "0 auto 20px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          color: "white",
-          borderRadius: "4px",
-          fontSize: "22px",
-          boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+          borderRadius: "6px",
         }}
       >
         {icon}
@@ -28,7 +24,7 @@ function Card({ title, text, icon }) {
 
       <h3
         style={{
-          fontSize: "16px",
+          fontSize: "18px",
           fontWeight: "bold",
           marginBottom: "10px",
         }}
@@ -40,7 +36,7 @@ function Card({ title, text, icon }) {
         style={{
           color: "#6b7280",
           fontSize: "14px",
-          lineHeight: "1.5",
+          lineHeight: "1.6",
         }}
       >
         {text}

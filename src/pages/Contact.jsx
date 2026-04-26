@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 function Contact() {
   return (
@@ -35,34 +36,66 @@ function Contact() {
         >
           {/* IZQUIERDA */}
           <div>
-            <h2 style={{ marginBottom: "20px" }}>
+            <h2 style={{ marginBottom: "30px" }}>
               INFORMACIÓN DE CONTACTO
             </h2>
 
-            <p><strong>DIRECCIÓN</strong></p>
-            <p style={{ marginBottom: "15px" }}>
-              Calle Urban Style 123 <br />
-              Medellín, Colombia
-            </p>
+            {/* DIRECCIÓN */}
+            <div style={{ display: "flex", gap: "15px", marginBottom: "25px" }}>
+              <div style={iconBox}>
+                <MapPin size={20} />
+              </div>
 
-            <p><strong>TELÉFONO</strong></p>
-            <p style={{ marginBottom: "15px" }}>
-              +57 300 123 4567
-            </p>
+              <div>
+                <strong>DIRECCIÓN</strong>
+                <p>
+                  Calle Urban Style 123 <br />
+                  Medellín, Colombia
+                </p>
+              </div>
+            </div>
 
-            <p><strong>EMAIL</strong></p>
-            <p style={{ marginBottom: "15px" }}>
-              info@urbanthreads.com
-            </p>
+            {/* TELÉFONO */}
+            <div style={{ display: "flex", gap: "15px", marginBottom: "25px" }}>
+              <div style={iconBox}>
+                <Phone size={20} />
+              </div>
 
-            <p><strong>HORARIO</strong></p>
-            <p>
-              Lun - Vie: 9:00 - 18:00 <br />
-              Sáb: 10:00 - 14:00
-            </p>
+              <div>
+                <strong>TELÉFONO</strong>
+                <p>+57 300 123 4567</p>
+              </div>
+            </div>
+
+            {/* EMAIL */}
+            <div style={{ display: "flex", gap: "15px", marginBottom: "25px" }}>
+              <div style={iconBox}>
+                <Mail size={20} />
+              </div>
+
+              <div>
+                <strong>EMAIL</strong>
+                <p>info@urbanthreads.com</p>
+              </div>
+            </div>
+
+            {/* HORARIO */}
+            <div style={{ display: "flex", gap: "15px" }}>
+              <div style={iconBox}>
+                <Clock size={20} />
+              </div>
+
+              <div>
+                <strong>HORARIO</strong>
+                <p>
+                  Lun - Vie: 9:00 - 18:00 <br />
+                  Sáb: 10:00 - 14:00
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* DERECHA (FORMULARIO) */}
+          {/* DERECHA */}
           <div
             style={{
               background: "white",
@@ -78,46 +111,39 @@ function Contact() {
             <p
               style={{
                 background: "#fef3c7",
-                padding: "10px",
+                padding: "12px",
                 marginBottom: "20px",
                 fontSize: "14px",
               }}
             >
-              Demo: Este es un formulario de demostración.
+              Demo: Este es un formulario de demostración. Los mensajes no se enviarán realmente.
             </p>
 
             <form>
-              <div style={{ display: "flex", gap: "10px", marginBottom: "10px" }}>
-                <input placeholder="Nombre" style={{ flex: 1, padding: "10px" }} />
-                <input placeholder="Apellidos" style={{ flex: 1, padding: "10px" }} />
+              {/* NOMBRE + APELLIDOS */}
+              <div style={{ display: "flex", gap: "15px", marginBottom: "15px" }}>
+                <input placeholder="Nombre" style={inputStyleHalf} />
+                <input placeholder="Apellidos" style={inputStyleHalf} />
               </div>
 
-              <input
-                placeholder="Email"
-                style={{ width: "100%", padding: "10px", marginBottom: "10px" }}
-              />
+              {/* EMAIL */}
+              <input placeholder="Email" style={inputStyle} />
 
-              <select
-                style={{ width: "100%", padding: "10px", marginBottom: "10px" }}
-              >
+              {/* SELECT */}
+              <select style={inputStyle}>
                 <option>Selecciona un asunto</option>
+                <option>Consulta general</option>
+                <option>Información de producto</option>
+                <option>Estado de pedido</option>
+                <option>Devoluciones</option>
+                <option>Otro</option>
               </select>
 
-              <textarea
-                placeholder="Mensaje"
-                style={{ width: "100%", padding: "10px", height: "100px", marginBottom: "15px" }}
-              />
+              {/* MENSAJE */}
+              <textarea placeholder="Mensaje" style={textareaStyle} />
 
-              <button
-                style={{
-                  width: "100%",
-                  background: "#111827",
-                  color: "white",
-                  padding: "12px",
-                  border: "none",
-                  cursor: "pointer",
-                }}
-              >
+              {/* BOTÓN */}
+              <button style={buttonStyle}>
                 ENVIAR MENSAJE
               </button>
             </form>
@@ -131,3 +157,50 @@ function Contact() {
 }
 
 export default Contact;
+
+
+
+
+
+
+/* 🔥 ESTILOS (ABAJO DEL ARCHIVO) */
+
+const iconBox = {
+  background: "#111827",
+  padding: "12px",
+  borderRadius: "4px",
+  color: "white",
+};
+
+const inputStyle = {
+  width: "100%",
+  padding: "12px",
+  marginBottom: "15px",
+  border: "1px solid #d1d5db",
+  outline: "none",
+};
+
+const inputStyleHalf = {
+  flex: 1,
+  padding: "12px",
+  border: "1px solid #d1d5db",
+  outline: "none",
+};
+
+const textareaStyle = {
+  width: "100%",
+  padding: "12px",
+  height: "120px",
+  marginBottom: "15px",
+  border: "1px solid #d1d5db",
+  outline: "none",
+};
+
+const buttonStyle = {
+  width: "100%",
+  background: "#111827",
+  color: "white",
+  padding: "12px",
+  border: "none",
+  cursor: "pointer",
+};

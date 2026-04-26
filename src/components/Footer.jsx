@@ -1,17 +1,21 @@
+import { Link } from "react-router-dom";
+import { Globe, Camera, ShoppingCart } from "lucide-react";
+
 function Footer() {
   return (
     <footer
       style={{
-        background: "#111827",
+        background: "linear-gradient(to right, #111, #222)",
         color: "white",
         padding: "60px 40px 30px",
       }}
     >
-      {/* CONTENEDOR */}
       <div
         style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
           display: "flex",
-          justifyContent: "space-around", 
+          justifyContent: "space-between",
           flexWrap: "wrap",
           gap: "40px",
         }}
@@ -20,46 +24,49 @@ function Footer() {
         <div style={{ maxWidth: "250px" }}>
           <h3>URBAN THREADS</h3>
           <p style={{ color: "#9ca3af", fontSize: "14px" }}>
-            Redefiniendo el estilo urbano con diseños minimalistas y calidad
-            premium.
+            Redefiniendo el estilo urbano con diseños minimalistas y calidad premium.
           </p>
         </div>
 
         {/* COLUMNA 2 */}
         <div>
           <h4>ENLACES</h4>
-          <p style={{ color: "#9ca3af" }}>Inicio</p>
-          <p style={{ color: "#9ca3af" }}>Productos</p>
-          <p style={{ color: "#9ca3af" }}>Contacto</p>
+
+          <Link to="/" style={linkStyle}>Inicio</Link>
+          <Link to="/productos" style={linkStyle}>Productos</Link>
+          <Link to="/contacto" style={linkStyle}>Contacto</Link>
         </div>
 
         {/* COLUMNA 3 */}
         <div>
           <h4>AYUDA</h4>
-          <p style={{ color: "#9ca3af" }}>Guía de tallas</p>
-          <p style={{ color: "#9ca3af" }}>Envíos</p>
-          <p style={{ color: "#9ca3af" }}>Devoluciones</p>
-          <p style={{ color: "#9ca3af" }}>FAQ</p>
+
+          <Link to="/" style={linkStyle}>Guía de tallas</Link>
+          <Link to="/" style={linkStyle}>Envíos</Link>
+          <Link to="/" style={linkStyle}>Devoluciones</Link>
+          <Link to="/" style={linkStyle}>FAQ</Link>
         </div>
 
         {/* COLUMNA 4 */}
         <div>
           <h4>SÍGUENOS</h4>
-          <p style={{ color: "#9ca3af", fontSize: "18px" }}>
-            🌐 📸 🛍️
-          </p>
+
+          <div style={{ display: "flex", gap: "15px", marginTop: "10px" }}>
+            <Globe style={iconStyle} />
+            <ShoppingCart style={iconStyle} />
+            <Camera style={iconStyle} />
+          </div>
         </div>
       </div>
 
-      {/* LINEA */}
       <hr
         style={{
-          margin: "30px 0",
+          margin: "30px auto",
+          maxWidth: "1200px",
           borderColor: "#374151",
         }}
       />
 
-      {/* COPYRIGHT */}
       <p
         style={{
           textAlign: "center",
@@ -74,3 +81,19 @@ function Footer() {
 }
 
 export default Footer;
+
+
+/* estilos */
+const linkStyle = {
+  display: "block",
+  color: "#9ca3af",
+  textDecoration: "none",
+  marginTop: "8px",
+  transition: "0.3s",
+};
+
+const iconStyle = {
+  color: "#9ca3af",
+  cursor: "pointer",
+  transition: "0.3s",
+};

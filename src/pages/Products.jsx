@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProductCard from "../components/ProductCard";
+import { User, ShoppingBag, Sliders, Trash2, Globe, Clock } from "lucide-react";
 
 function Products() {
   return (
@@ -24,7 +25,7 @@ function Products() {
           </p>
         </div>
 
-        {/* PRODUCTOS */}
+        {/* GRID */}
         <div
           style={{
             display: "grid",
@@ -37,24 +38,28 @@ function Products() {
             name="Camiseta Básica Urban"
             description="Algodón 100% orgánico"
             price="€29"
+            icon={<User size={60} color="#9ca3af" />}
           />
 
           <ProductCard
             name="Jeans Slim Fit"
             description="Denim premium stretch"
             price="€89"
+            icon={<ShoppingBag size={60} color="#9ca3af" />}
           />
 
           <ProductCard
             name="Sudadera Oversize"
             description="Algodón French Terry"
             price="€65"
+            icon={<Sliders size={60} color="#9ca3af" />}
           />
 
           <ProductCard
             name="Chaqueta Bomber"
             description="Nylon resistente al agua"
             price="€120"
+            icon={<Trash2 size={60} color="#9ca3af" />}
           />
 
           {/* FILA CENTRADA */}
@@ -63,6 +68,7 @@ function Products() {
               name="Gorra Snapback"
               description="Bordado premium"
               price="€35"
+              icon={<Globe size={60} color="#9ca3af" />}
             />
           </div>
 
@@ -71,6 +77,7 @@ function Products() {
               name="Zapatillas Urban"
               description="Suela de goma antideslizante"
               price="€95"
+              icon={<Clock size={60} color="#9ca3af" />}
             />
           </div>
         </div>

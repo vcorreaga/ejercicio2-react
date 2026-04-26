@@ -1,35 +1,36 @@
-function ProductCard({ name, description, price }) {
+import { User, ShoppingBag, Sliders, Trash2, Globe, Clock } from "lucide-react";
+
+function ProductCard({ name, description, price, icon }) {
   return (
     <div
       style={{
         background: "white",
-        width: "220px",
-        borderRadius: "6px",
+        width: "260px",
+        borderRadius: "8px",
         overflow: "hidden",
-        boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+        boxShadow: "0 6px 15px rgba(0,0,0,0.08)",
       }}
     >
-      {/* IMAGEN */}
+      {/* ICONO GRANDE */}
       <div
         style={{
-          height: "200px",
+          height: "240px",
           background: "#e5e7eb",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          fontSize: "40px",
-          color: "#9ca3af",
         }}
       >
-        🧍
+        {icon}
       </div>
 
       {/* CONTENIDO */}
-      <div style={{ padding: "15px" }}>
+      <div style={{ padding: "20px" }}>
         <h3
           style={{
-            fontSize: "15px",
-            marginBottom: "5px",
+            fontSize: "16px",
+            marginBottom: "8px",
+            fontWeight: "600",
           }}
         >
           {name}
@@ -37,9 +38,9 @@ function ProductCard({ name, description, price }) {
 
         <p
           style={{
-            fontSize: "13px",
+            fontSize: "14px",
             color: "#6b7280",
-            marginBottom: "10px",
+            marginBottom: "15px",
           }}
         >
           {description}
@@ -52,16 +53,18 @@ function ProductCard({ name, description, price }) {
             alignItems: "center",
           }}
         >
-          <span style={{ fontWeight: "bold" }}>{price}</span>
+          <span style={{ fontWeight: "bold", fontSize: "16px" }}>
+            {price}
+          </span>
 
           <button
             style={{
               background: "#111827",
               color: "white",
               border: "none",
-              padding: "6px 10px",
+              padding: "8px 14px",
               cursor: "pointer",
-              fontSize: "12px",
+              fontSize: "13px",
             }}
           >
             AÑADIR
